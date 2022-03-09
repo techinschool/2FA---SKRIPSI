@@ -1,0 +1,70 @@
+<ion-content [fullscreen]="true">
+
+  <div class="wave-container">
+    <h3>Halaman Register</h3>
+    <img src="assets/2register.png">
+
+    
+   <form  #loginForm=ngForm  (ngSubmit)="register()">
+    <ion-item>
+      <ion-label position="floating"  required>Nama Lengkap <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input  type="name"></ion-input>
+    </ion-item>
+    
+    <!-- required name="name" [(ngModel)]="form.name"   -->
+     <ion-item>
+       <ion-label position="floating"  required>Email <ion-text color="danger">*</ion-text></ion-label>
+       <ion-input required  type="email"  ></ion-input>
+     </ion-item>
+     <!-- name="email" [(ngModel)]="form.email"    -->
+
+     <ion-item>
+       <ion-label position="floating">Password <ion-text color="danger">*</ion-text></ion-label>
+       <ion-input required  type="password" required></ion-input>
+     </ion-item>
+<!-- [(ngModel)]="form.password" name="password"  -->
+     <ion-button shape="round" color="primary"  (click)="loadActionSheet()" style="margin-top:20px;" type="submit" [disabled]="!loginForm.valid">
+       UPLOAD CITRA WAJAH &nbsp;<ion-icon  name="log-in"></ion-icon>
+     </ion-button>
+     <ion-button shape="round"  color="primary" style="margin-top:20px;" type="submit" [disabled]="!loginForm.valid">
+      DAFTAR &nbsp;<ion-icon  name="log-in"></ion-icon>
+    </ion-button>
+
+     
+
+
+  <br> <br> <br>
+
+    <ion-col size="12">
+      <ion-text color="primary" class="ion-text" style="justify-content: center;">
+       <b>akun sudah terdaftar,  <br> silahkan login</b>
+      </ion-text>
+    </ion-col>
+  <br>
+    <ion-button color="warning" shape="round" routerLink="/login" class="ion-text-capitalize">
+      Login
+    </ion-button>
+
+
+   </form>
+
+
+    
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L120,101.3C240,139,480,213,720,202.7C960,192,1200,96,1320,48L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+    </div>
+
+    <ion-footer class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>
+          <span class="ion-float-left">Delvan Nofrizaldi</span> 
+            <span class="ion-float-right">techinschool.id</span>
+        </ion-title>
+      </ion-toolbar>
+    </ion-footer> 
+    
+  
+</ion-content>
+
+
+
